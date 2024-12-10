@@ -6,7 +6,7 @@ The project is for a interview. It's a simple app with form.
 
 ## Installation
 ```bash
-git clone
+git clone https://github.com/EpsilonKu/interview-nurdaulet-kurenshe.git
 cd interview-nurdaulet-kurenshe
 npm install
 ```
