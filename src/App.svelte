@@ -34,7 +34,6 @@
     $: if (data) data = formatData();
 
     function formatData() {
-        console.log(data);
         return {
             firstname: data.firstname.replace(/[^a-zA-Z]+/g, ""),
             lastname: data.lastname.replace(/[^a-zA-Z]+/g, ""),
@@ -107,7 +106,11 @@
             </div>
             <div class="form-control">
                 <label for="date"> Date: </label>
-                <DatePicker bind:isOpen={isDateOpen} bind:startDate>
+                <DatePicker
+                    bind:isOpen={isDateOpen}
+                    bind:startDate
+                    theme="custom-datepicker"
+                >
                     <input
                         type="text"
                         name="date"
@@ -184,5 +187,8 @@
     }
     .form-control {
         @apply mt-4 grid gap-2;
+    }
+    :global(.datepicker[data-picker-theme="custom-datepicker"]) {
+        --datepicker-calendar-range-selected-background: #18181b;
     }
 </style>
